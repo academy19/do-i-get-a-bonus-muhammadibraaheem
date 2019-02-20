@@ -1,7 +1,11 @@
 object Application {
 
-  // write your function here
+def calculateBonus(wage: Int, bonus: Boolean): String = {
+  if (bonus == true) s"£${(wage * 1.2).toInt}"
 
+  else s"£$wage"
+
+}
 
   def main(args : Array[String]) : Unit = {
     println(calculateBonus(100, true))  // should print £120
